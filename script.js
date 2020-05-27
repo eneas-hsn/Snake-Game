@@ -37,7 +37,47 @@ window.onload=function () {
  ctx.fillStyle="gray"
  for (let i = 0; i < rastro.length; i++) {
     ctx.fillRect(rastro[i].x*tamanhoPeça,rastro[i].y*tamanhoPeça,tamanhoPeça,tamanhoPeça)
- }
+    if (rastro[i].x==px && rastro[i].y==py) {
+        tail=5
+        speedX=speedY=0
+    } 
 }
+ ctx.font="16px COURIER"
+ ctx.fillText("SNAKE GAME",157,20)
  
+ ctx.font="13px courier"
+ ctx.fillText("POINTS "+tail,324,389)
+rastro.push({x:px,y:py})
+while (rastro.length>tail) {
+    rastro.shift()
+}
+if (maçaX==px&&maçaY==py) {
+    tail++
+    maçaX=Math.floor(Math.random()*quantidadePeças)
+    maçaY=Math.floor(Math.random()*quantidadePeças)
+}
+}
+ function keyPush(event) {
+     switch (event.keyCode) {
+         case 37://left
+             speedX=-speed
+             speedY=0
+             break;
+             case 38://up
+             speedX=0
+             speedY=-speed
+             break;
+             case 39://right
+             speedX=speed
+             speedY=0
+             break;
+             case 40://down
+             speedX=0
+             speedY=speed
+             break;
+     
+         default:
+             break;
+     }
+ }
 }
