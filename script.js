@@ -1,7 +1,7 @@
 window.onload=function () {
  var stage=this.document.getElementById("stage")   
  var ctx=stage.getContext("2d")
-
+ this.document.addEventListener("keydown",keyPush)
  this.setInterval(game,60)
  
  const speed=1
@@ -12,7 +12,9 @@ window.onload=function () {
  var maçaX= maçaY=15
  var rastro=[]
  tail=5
-
+ 
+ 
+ 
  function game() {
      px+=speedX
      py+=speedY
