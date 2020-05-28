@@ -15,10 +15,6 @@
 function gameOver() {
     speedX=speedY=0
     tail=5
-    var gameover=document.getElementById('gameover')
-    var points=document.getElementById("points")
-    gameover.innerText="GAME OVER"
-    points.innerHTML= tail+" POINTS"
 }
 function gameStart() {
    hiden()
@@ -93,7 +89,4 @@ if (maçaX==px&&maçaY==py) {
              break;
      
          default:
-             break;
-     }
- }
-}
+             break;}}}
