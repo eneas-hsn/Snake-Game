@@ -1,2 +1,2 @@
-# jogodacobrinha
+# Basic Snake Game
  
