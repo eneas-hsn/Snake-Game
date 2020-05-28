@@ -3,12 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Snake Game</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div id="home">
+        <h2>SNAKE GAME</h2>
+        <img src="./img/eternity.png" alt="">
+        <input type="button" value="START" onclick="gameStart()" id="start" >
+    </div>
     <canvas id="stage" width="400" height="400">
-
     </canvas>
+    <div id="gameover">
+        <div id="points"></div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
