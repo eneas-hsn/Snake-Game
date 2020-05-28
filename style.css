@@ -27,4 +27,33 @@
     opacity: 0%;
     visibility: hidden;
  }
-
+ #gameover{
+     background-color: #576574;
+     width: 300px;
+     height: 100px;
+     position: absolute;
+     margin-top: 150px;
+     margin-left: 50px;
+ }
+#gameover p1{
+    font:16px courier;
+    color: white;
+    margin-left:115px ;
+    margin-top:5px;
+    position: absolute;
+    
+}
+#gameover p2{
+    color: white;
+    font:13px courier;
+    margin-left: 19px;
+    position: absolute;
+    margin-top:-10px;
+}
+#restart{
+    background-color: #222f3e;
+    color: white;
+    height: 35px;
+    width:230px;
+    margin-left: -100px;
+}
