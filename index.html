@@ -12,9 +12,13 @@
         <img src="./img/eternity.png" alt="">
         <input type="button" value="START" onclick="gameStart()" id="start" >
     </div>
+    <div id="gameover" class="hide">
+        <p1>GAME OVER</p>
+        <p2 id="points">POINTS</p>
+        <button id="restart" onclick="gameStart()">RESTART</button>
+    </div>
     <canvas id="stage" width="400" height="400">
     </canvas>
-    <div id="gameover"></div>
     <script src="script.js"></script>
 </body>
 </html>
