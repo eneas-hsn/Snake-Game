@@ -1,9 +1,3 @@
-window.onload=function () {
- var stage=this.document.getElementById("stage")   
- var ctx=stage.getContext("2d")
- this.document.addEventListener("keydown",keyPush)
- this.setInterval(game,60)
- 
  const speed=1
  var speedX= speedY= 0
  var px=py=10
@@ -12,6 +6,26 @@ window.onload=function () {
  var maçaX= maçaY=15
  var rastro=[]
  tail=5
+ function hiden() {
+        document
+        .getElementById('home')
+        .classList
+        .toggle("hide")
+    }
+function gameOver() {
+    speedX=speedY=0
+    tail=5
+    var gameover=document.getElementById('gameover')
+    var points=document.getElementById("points")
+    gameover.innerText="GAME OVER"
+    points.innerHTML= tail+" POINTS"
+}
+function gameStart() {
+   hiden()
+ var stage=this.document.getElementById("stage")   
+ var ctx=stage.getContext("2d")
+ this.document.addEventListener("keydown",keyPush)
+ this.setInterval(game,60)
  
  
  
@@ -30,7 +44,7 @@ window.onload=function () {
      if (py>quantidadePeças-1) {
          py=0
      }
- ctx.fillStyle="black"
+ ctx.fillStyle="#222f3e"
  ctx.fillRect(0,0,stage.width,stage.height)
 
  ctx.fillStyle="red"
@@ -40,10 +54,10 @@ window.onload=function () {
  for (let i = 0; i < rastro.length; i++) {
     ctx.fillRect(rastro[i].x*tamanhoPeça,rastro[i].y*tamanhoPeça,tamanhoPeça,tamanhoPeça)
     if (rastro[i].x==px && rastro[i].y==py) {
-        tail=5
-        speedX=speedY=0
+        gameOver()
     } 
 }
+ ctx.fillStyle="white"
  ctx.font="16px COURIER"
  ctx.fillText("SNAKE GAME",157,20)
  
