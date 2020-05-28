@@ -1,0 +1,30 @@
+#home{
+    background-color: #222f3e;
+    height: 400px;
+    width: 400px;
+    position: absolute;
+}
+#home h2{
+    color: white;
+    font:30px courier;
+    text-align: center;
+    padding: 8px;
+}
+#home img{
+    height: 180px;
+    width:180px;
+    margin-left: 110px;
+    margin-bottom: 40px;
+}
+#start{
+    font: 22px courier;
+    color: white;
+    background-color: #222f3e;
+    width: 250px;
+    margin-left: 75px;
+}
+.hide{
+    opacity: 0%;
+    visibility: hidden;
+ }
+
