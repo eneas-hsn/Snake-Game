@@ -35,20 +35,26 @@
      margin-top: 150px;
      margin-left: 50px;
  }
-#gameover p1{
+#tituloover{
     font:16px courier;
     color: white;
-    margin-left:115px ;
+    margin-left:102px ;
     margin-top:5px;
     position: absolute;
     
 }
-#gameover p2{
+#black{
+    background-color: black;
+    position: absolute;
+    height: 400px;
+    width: 400px;
+}
+#points{
     color: white;
     font:13px courier;
-    margin-left: 13px;
     position: absolute;
-    margin-top:-20px;
+    margin-top: 27px;
+    margin-left: 115px;
     
 }
 #restart{
@@ -56,6 +62,7 @@
     position: relative;
     color: white;
     height: 35px;
-    width:230px;
-    margin-left: -100px;
+    width:250px;
+    margin-top: 50px;
+    margin-left: 25px;
 }

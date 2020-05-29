@@ -1,25 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Snake Game</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div id="home">
         <h2>SNAKE GAME</h2>
         <img src="./img/snake (2).png" alt="">
-        <input type="button" value="START" onclick="gameStart()" id="start" >
+        <input type="button" value="START" onclick="gameStart()" id="start">
     </div>
-    <div id="gameover" class="hide">
-        <p1>GAME OVER</p>
-        <p2 id="points"></p>
-        <input type="button" id="restart" value="RESTART" onclick="gameInit()">
-        <canvas id="botao" width="250" height="40"></canvas>
+    <div id="black" class="hide">
+        <div id="gameover" >
+            <div id="tituloover">GAME OVER</div>
+            <div id="points"></div>
+            <input type="button" id="restart" value="RESTART" onclick="gameInit()">
+            <canvas id="botao" width="250" height="40"></canvas>
+        </div>
     </div>
     <canvas id="stage" width="400" height="400">
     </canvas>
     <script src="script.js"></script>
 </body>
+
 </html>
