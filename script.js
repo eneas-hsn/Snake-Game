@@ -1,16 +1,32 @@
-const speed = 1
-var speedX = speedY = 0
+var stage = this.document.getElementById("stage")
+    var ctx = stage.getContext("2d")
+    
+    const speed = 1
+var speedX = speedY = 1
 var positionX = positionY = 10
 var tamanhoPeça = 20
 var quantidadePeças = 20
 var maçaX = maçaY = 15
 var rastro = []
 tail = 5
+
+function gameInit() {
+    
+    document
+        .getElementById('gameover')
+        .classList
+        .add("hide")
+    gameStart()
+}
 function hiden() {
     document
         .getElementById('home')
         .classList
-        .toggle("hide")
+        .add("hide")
+    document
+        .getElementById('gameover')
+        .classList
+        .add("hide")
 }
 function hidenover() {
     document
@@ -22,31 +38,34 @@ function hidenover() {
 function começoAutomatico() {
     speedX = speed
     speedY = 0
+    tail=5
 }
 function gameOver() {
-    var gameover = document.getElementById('gameover')
-    var points=document.getElementById('points')
-    points.innerText=`${tail} POINTS`
-    points.style.marginLeft="12px"
-    points.style.position="absolute"
-    points.style.marginTop="0px"
+    var speedX = speedY =0
+
+var maçaX = maçaY = 10
+tail=5
+
+    // var pts=document.getElementById('points')
+    // pts.innerHTML=`${tail} POINTS`
+    //  ctx.fillStyle="black"
+    //  ctx.fillRect(400,400,400,400)
+    // var gameover = document.getElementById('gameover')
+    // var points=document.getElementById('points')
+    // points.innerHTML=`${tail} POINTS`
+    // points.style.marginLeft="12px"
+    // points.style.position="absolute"
+    // points.style.marginTop="0px"
     
 }
-function reset() {
-    hidenover()
-    gameOver()
-    speedX = speedY = 0
 
-}
 
 function gameStart() {
-
+    
     começoAutomatico()
     hiden()
-    var stage = this.document.getElementById("stage")
-    var ctx = stage.getContext("2d")
     this.document.addEventListener("keydown", keyPush)
-    this.setInterval(game, 60)
+    this.setInterval(game,80)
 
     function game() {
 
@@ -74,9 +93,13 @@ function gameStart() {
         for (let i = 0; i < rastro.length; i++) {
             ctx.fillRect(rastro[i].x * tamanhoPeça, rastro[i].y * tamanhoPeça, tamanhoPeça, tamanhoPeça)
             if (rastro[i].x == positionX && rastro[i].y == positionY) {
-                reset()
+                speedX = speedY = 0
+                
+                hidenover()
+    gameOver()
             }
         }
+        
         ctx.fillStyle = "white"
         ctx.font = "16px COURIER"
         ctx.fillText("SNAKE GAME", 157, 20)
