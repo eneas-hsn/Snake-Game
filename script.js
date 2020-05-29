@@ -78,7 +78,7 @@ function game() {
     ctx.fillStyle = "red"
     ctx.fillRect(maçaX * tamanhoPeça, maçaY * tamanhoPeça, tamanhoPeça, tamanhoPeça)
 
-    ctx.fillStyle = "gray"
+    ctx.fillStyle = "#341f97"
     for (let i = 0; i < rastro.length; i++) {
         ctx.fillRect(rastro[i].x * tamanhoPeça, rastro[i].y * tamanhoPeça, tamanhoPeça, tamanhoPeça)
         if (rastro[i].x == positionX && rastro[i].y == positionY) {

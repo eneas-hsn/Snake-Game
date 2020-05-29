@@ -10,6 +10,13 @@
     text-align: center;
     padding: 8px;
 }
+#home h5{
+    color: white;
+    font: 10px courier;
+    position: absolute;
+    margin-left: 163px;
+    margin-top: 28px;
+}
 #home img{
     height: 180px;
     width:180px;
@@ -44,7 +51,7 @@
     
 }
 #black{
-    background-color: black;
+    background-color: #222f3e;
     position: absolute;
     height: 400px;
     width: 400px;
