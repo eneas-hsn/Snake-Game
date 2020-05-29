@@ -49,13 +49,8 @@ tail=5
     // var pts=document.getElementById('points')
     // pts.innerHTML=`${tail} POINTS`
     //  ctx.fillStyle="black"
-    //  ctx.fillRect(400,400,400,400)
-    // var gameover = document.getElementById('gameover')
-    // var points=document.getElementById('points')
-    // points.innerHTML=`${tail} POINTS`
-    // points.style.marginLeft="12px"
-    // points.style.position="absolute"
-    // points.style.marginTop="0px"
+    //  ctx.fillRect(0,0,400,400)
+    
     
 }
 
