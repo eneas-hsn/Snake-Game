@@ -12,13 +12,12 @@ var rastro = []
 var tail = 5
 
 function gameInit() {
-    
     game()
     começoAutomatico()
     hiden()
     this.document.addEventListener("keydown", keyPush)
     this.setInterval(game, 80)
-    
+
     document
         .getElementById('black')
         .classList
@@ -39,7 +38,6 @@ function hidenover() {
         .getElementById('black')
         .classList
         .remove("hide")
-
 }
 function começoAutomatico() {
     speedX = speed
@@ -49,13 +47,12 @@ function começoAutomatico() {
 function gameOver() {
     var speedX = speedY = 0
     var maçaX = maçaY = 10
-    
+
     var pts = document.getElementById('points')
     pts.innerHTML = `${tail} POINTS`
-    var records=document.getElementById("record")
-    records.innerHTML=`RECORD ${recorde}`
+    var records = document.getElementById("record")
+    records.innerHTML = `RECORD ${recorde}`
 }
-
 
 function game() {
     positionX += speedX
@@ -83,16 +80,16 @@ function game() {
         ctx.fillRect(rastro[i].x * tamanhoPeça, rastro[i].y * tamanhoPeça, tamanhoPeça, tamanhoPeça)
         if (rastro[i].x == positionX && rastro[i].y == positionY) {
             speedX = speedY = 0
-
             hidenover()
             gameOver()
-            recorde=localStorage.getItem("recorde")
-    if (recorde==null) {
-        recorde=0}
-    if (this.tail>recorde) {
-        localStorage.setItem("recorde", this.tail)   
-        recorde=this.tail
-    }
+            recorde = localStorage.getItem("recorde")
+            if (recorde == null) {
+                recorde = 0
+            }
+            if (this.tail > recorde) {
+                localStorage.setItem("recorde", this.tail)
+                recorde = this.tail
+            }
         }
     }
 
