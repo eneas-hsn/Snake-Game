@@ -7,8 +7,9 @@ var positionX = positionY = 10
 var tamanhoPeça = 20
 var quantidadePeças = 20
 var maçaX = maçaY = 15
+var recorde
 var rastro = []
-tail = 5
+var tail = 5
 
 function gameInit() {
     
@@ -16,7 +17,6 @@ function gameInit() {
     começoAutomatico()
     hiden()
     this.document.addEventListener("keydown", keyPush)
-    this.y
     this.setInterval(game, 80)
     
     document
@@ -50,13 +50,13 @@ function gameOver() {
     var speedX = speedY = 0
     var maçaX = maçaY = 10
     
-
     var pts = document.getElementById('points')
     pts.innerHTML = `${tail} POINTS`
-    
-
-
+    var records=document.getElementById("record")
+    records.innerHTML=`RECORD ${recorde}`
 }
+
+
 function game() {
     positionX += speedX
     positionY += speedY
@@ -86,6 +86,13 @@ function game() {
 
             hidenover()
             gameOver()
+            recorde=localStorage.getItem("recorde")
+    if (recorde==null) {
+        recorde=0}
+    if (this.tail>recorde) {
+        localStorage.setItem("recorde", this.tail)   
+        recorde=this.tail
+    }
         }
     }
 
@@ -111,7 +118,6 @@ function gameStart() {
     começoAutomatico()
     hiden()
     this.document.addEventListener("keydown", keyPush)
-    this.y
     this.setInterval(game, 80)
 
     function keyPush(event) {

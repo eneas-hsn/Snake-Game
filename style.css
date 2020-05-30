@@ -61,8 +61,14 @@
     font:13px courier;
     position: absolute;
     margin-top: 27px;
-    margin-left: 115px;
-    
+    margin-left: 55px;
+}
+#record{
+    color: white;
+    font:13px courier;
+    position: absolute;
+    margin-top: 27px;
+    margin-left: 175px;   
 }
 #restart{
     background-color: #222f3e;
