@@ -14,7 +14,6 @@
     color: white;
     font: 10px courier;
     text-align: center;
-    
 }
 #home img{
     height: 180px;
@@ -51,8 +50,8 @@
 #black{
     background-color: #222f3e;
     position: absolute;
-    height: 800px;
-    width: 800px;
+    height: 400px;
+    width: 400px;
 }
 #points{
     color: white;

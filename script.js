@@ -3,9 +3,9 @@ var ctx = stage.getContext("2d")
 
 const speed = 1
 var speedX = speedY = 1
-var positionX = positionY = 20
-var tamanhoPeça = 40
-var quantidadePeças = 40
+var positionX = positionY = 10
+var tamanhoPeça = 20
+var quantidadePeças = 20
 var maçaX = maçaY = 15
 var recorde
 var rastro = []
@@ -94,11 +94,11 @@ function game() {
     }
 
     ctx.fillStyle = "white"
-    ctx.font = "36px COURIER"
-    ctx.fillText("SNAKE GAME", 270, 40)
+    ctx.font = "16px COURIER"
+    ctx.fillText("SNAKE GAME", 157, 20)
 
-    ctx.font = "23px courier"
-    ctx.fillText("POINTS " + tail, 670, 779)
+    ctx.font = "13px courier"
+    ctx.fillText("POINTS " + tail, 324, 389)
     rastro.push({ x: positionX, y: positionY })
     while (rastro.length > tail) {
         rastro.shift()
