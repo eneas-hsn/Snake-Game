@@ -1,7 +1,7 @@
 #home{
     background-color: #222f3e;
-    height: 700px;
-    width: 700px;
+    height: 800px;
+    width: 800px;
     position: absolute;
 }
 #home h2{
@@ -13,9 +13,8 @@
 #home h5{
     color: white;
     font: 10px courier;
-    position: absolute;
-    margin-left: 163px;
-    margin-top: 28px;
+    text-align: center;
+    
 }
 #home img{
     height: 180px;
@@ -52,8 +51,8 @@
 #black{
     background-color: #222f3e;
     position: absolute;
-    height: 400px;
-    width: 400px;
+    height: 800px;
+    width: 800px;
 }
 #points{
     color: white;
