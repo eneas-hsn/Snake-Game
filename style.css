@@ -1,7 +1,7 @@
 #home{
     background-color: #222f3e;
-    height: 800px;
-    width: 800px;
+    height: 400px;
+    width: 400px;
     position: absolute;
 }
 #home h2{
@@ -13,7 +13,9 @@
 #home h5{
     color: white;
     font: 10px courier;
-    text-align: center;
+    position: absolute;
+    margin-left: 163px;
+    margin-top: 28px;
 }
 #home img{
     height: 180px;
